@@ -4,7 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ReloadPlugin = require('reload-html-webpack-plugin');
+const ReloadPlugin = require('reload-html-webpack-plugin'); // To watch for HTML changes 
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin'); // Increase speed
 
 module.exports = {
   entry: './app/index.js',
@@ -70,6 +71,7 @@ module.exports = {
     new CopyWebpackPlugin([
       {from:'app/images',to:'images'} 
   ]), 
-  new ReloadPlugin(),
+  // new ReloadPlugin(),
+  new HardSourceWebpackPlugin(),
   ]
 };

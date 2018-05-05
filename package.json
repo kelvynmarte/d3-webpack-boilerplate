@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "d3": "^5.1.0",
+    "hard-source-webpack-plugin": "^0.6.4",
     "jquery": "^3.3.1",
     "normalize": "^0.3.1",
     "topojson": "^3.0.2"
