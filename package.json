@@ -1,0 +1,51 @@
+{
+  "name": "wp-minimalist-boilerplate",
+  "version": "1.0.0",
+  "description": "Minimal webpack boilerplate with HMR and sass",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpggvilaca/webpack-boilerplate"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --progress --colors",
+    "build": "webpack"
+  },
+  "keywords": [
+    "webpack",
+    "boilerplate",
+    "hmr",
+    "sass"
+  ],
+  "author": "João Vilaça",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-hot-loader": "^1.1.1",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "*",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.3",
+    "reload-html-webpack-plugin": "^0.1.2",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.1",
+    "uglifyjs-webpack-plugin": "^1.0.1",
+    "url-loader": "^1.0.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "d3": "^5.1.0",
+    "jquery": "^3.3.1",
+    "normalize": "^0.3.1",
+    "topojson": "^3.0.2"
+  }
+}

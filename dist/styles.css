@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif; }
+
+.d3-root {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background: #FFFFFF; }
+
+.counties {
+  fill: none; }
+
+.states {
+  fill: none;
+  stroke: #0ff;
+  stroke-linejoin: round; }
