@@ -1,3 +1,4 @@
+@import "../node_modules/normalize.css/normalize.css";
 body {
   font-family: sans-serif;
 }
@@ -5,7 +6,7 @@ body {
 .d3-root {
   display: block;
   height: 100vh;
-  width: 100vw;
+  width: 100%; // 100vw 
   background: #FFFFFF;
 }
 
@@ -15,6 +16,12 @@ body {
 
 .states {
   fill: none;
-  stroke: pink;
+  stroke: #FFFFFF;
   stroke-linejoin: round;
+}
+.work-cover {
+  height: 100vh;
+  width: 100%;
+  background: url(images/work.jpg) no-repeat center center; 
+  background-size: cover;
 }

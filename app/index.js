@@ -1,5 +1,4 @@
-// Hot Reload Index
-// import indexHtml from "./index.html";
+'use strict';
 
 // Style 
 import './index.scss';
@@ -11,15 +10,15 @@ console.log(usmapfile);
 
 console.log('Boilerplate is working!');
 
-'use strict';
 
 import $ from 'jquery';
 import * as d3 from 'd3';
+import * as topojson from 'topojson';
 // import d3SelectMulti from 'd3-selection-multi';
 
 
 
-import * as topojson from 'topojson';
+
 
 $(() => {
 

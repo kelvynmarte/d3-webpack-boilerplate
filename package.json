@@ -8,6 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "prestart": "",
     "start": "webpack-dev-server --inline --progress --colors",
     "build": "webpack"
   },
@@ -20,6 +21,7 @@
   "author": "João Vilaça",
   "license": "ISC",
   "devDependencies": {
+    "autodll-webpack-plugin": "^0.3.9",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -46,7 +48,9 @@
     "d3": "^5.1.0",
     "hard-source-webpack-plugin": "^0.6.4",
     "jquery": "^3.3.1",
+    "modernizr": "^3.6.0",
     "normalize": "^0.3.1",
+    "normalize.css": "^8.0.0",
     "topojson": "^3.0.2"
   }
 }

@@ -6,6 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ReloadPlugin = require('reload-html-webpack-plugin'); // To watch for HTML changes 
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin'); // Increase speed
+const AutoDllPlugin = require('autodll-webpack-plugin'); // Increase speed and bundle js
 
 module.exports = {
   entry: './app/index.js',
@@ -19,7 +20,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
-    // watchContentBase: true,
+    // watchContentBase: true, // Optional if reload when changing index.html is required, but always reloads the whole page #1/2
     port: 3500,
     hot: true,
   },
@@ -31,7 +32,7 @@ module.exports = {
         use: 'babel-loader'
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|sass|css)$/,
         exclude: /node_modules/,
         use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -64,14 +65,26 @@ module.exports = {
   plugins: [
     new UglifyJsPlugin(),
     new HtmlWebpackPlugin({
+      inject: true,
       template: './app/index.html'
+    }),
+    new AutoDllPlugin({
+      inject: true, // will inject the DLL bundles to index.html
+      filename: '[name]_[hash].js',
+      entry: {
+        vendor: [
+          'jquery',
+          'd3',
+          'topojson',
+        ]
+      }
     }),
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([
       {from:'app/images',to:'images'} 
   ]), 
-  // new ReloadPlugin(),
+  // new ReloadPlugin(),// Optional if reload when changing index.html is required, but always reloads the whole page #2/2
   new HardSourceWebpackPlugin(),
   ]
 };
