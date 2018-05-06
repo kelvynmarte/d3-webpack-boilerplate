@@ -17,5 +17,3 @@
 * Sass support
 * Hot Module Reload - browser reloads whenever a js or scss file changes.
 * normalize.css
-
-* You can change the port on webpack.config.js at line 19
