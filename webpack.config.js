@@ -9,7 +9,7 @@ const HardSourceWebpackPlugin = require('hard-source-webpack-plugin'); // Increa
 const AutoDllPlugin = require('autodll-webpack-plugin'); // Increase speed and bundle js
 
 module.exports = {
-  entry: './app/index.js',
+  entry: './app/script/index.js',
 
   output: {
     path: path.resolve(__dirname, 'dist'),

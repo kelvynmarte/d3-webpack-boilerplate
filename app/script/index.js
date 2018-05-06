@@ -6,11 +6,11 @@ import * as d3 from 'd3';
 import * as topojson from 'topojson';
 
 // Style 
-import './index.scss';
+import '../style/index.scss';
 
 // Data imports
-import usmapfile from "./data/us-10m.v1.json";
-import unemploymentfile from "./data/unemployment.tsv";
+import usmapfile from "../data/us-10m.v1.json";
+import unemploymentfile from "../data/unemployment.tsv";
 
 $(() => {
     var svg = d3.select('#d3-root'),
