@@ -14,6 +14,7 @@
 * Webpack Build and Development with Hot Module Reload, AutoDLL and HardSourceWebpackPlugin for a faster refresh
 * D3.js example using topojson, tsv and json
 * ES6 support
-* Sass support
+* SASS support
+* CSS autoprefixer with postcss (IE10 and browsers with > 1% distribution) – edit browserslist in package.json to change supported browsers 
 * Hot Module Reload - browser reloads whenever a js or scss file changes.
 * normalize.css

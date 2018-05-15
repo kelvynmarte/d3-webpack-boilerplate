@@ -36,7 +36,7 @@ module.exports = {
         exclude: /node_modules/,
         use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader!sass-loader'
+          use: 'css-loader!postcss-loader!sass-loader'
         })),
       },
       { // File Loader Data
