@@ -8,6 +8,8 @@
 * Start the server - `npm start`
 * Navigate to `localhost:3500` in the browser.
 * Enjoy!
+* Build – `npm run build`
+* Publish the dist folder!
 
 ## Content
 
